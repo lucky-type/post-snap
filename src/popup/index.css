@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F7F7F5;
+    --border-subtle: #E3E3E3;
+    --text-primary: #37352F;
+    --text-secondary: #787774;
+  }
+}
+
+@layer base {
+  body {
+    @apply antialiased text-[#37352F] bg-white;
+    min-width: 400px;
+    min-height: 500px;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .notion-border {
+    @apply border border-[#E3E3E3];
+  }
+
+  .notion-hover {
+    @apply hover:bg-[#F1F1EF] transition-colors duration-150;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}

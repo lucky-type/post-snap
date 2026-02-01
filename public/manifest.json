@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "PostSnap",
+  "version": "1.0.0",
+  "description": "Capture HTTP requests and save to Postman collections",
+  "permissions": [
+    "storage",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "PostSnap - Capture requests"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
